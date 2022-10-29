@@ -13,7 +13,6 @@ import gsapCore from 'gsap/gsap-core'
 const About = () => {
   // wait until DOM has been rendered
   useEffect(() => {
-    console.clear();
     let count = 0;
     const targets = document.querySelectorAll(".about__me-image");
     gsap.set(targets, { xPercent:100 });

@@ -10,6 +10,20 @@ const Animation = () => {
 
     // wait until DOM has been rendered
     useEffect(() => {
+
+        var width = 390;
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                width=250;
+                console.log("width 800px");
+            } else {
+                width=390;
+                console.log("width +800px");
+            }
+        }
+        var x = window.matchMedia("(max-width: 800px)")
+        myFunction(x) // Call listener function at run time
+        //x.addListener(myFunction) // Attach listener function on state changes
         //my first code line with gsap in React
         //gsap.to(boxRef.current, { rotation: "+=360" });
 
@@ -28,8 +42,8 @@ const Animation = () => {
         gsap.to(".text1", {duration:1, text: "Hello", delay: 3});
         gsap.to(".text2", {duration:1, text: "I'm Victor", delay: 4});        
 
-        gsap.from(".text1",{duration:2, y:390, ease:"slow", delay: 5});
-        gsap.from(".text2",{duration:2, y:390, ease:"slow", delay: 5});
+        gsap.from(".text1",{duration:2, y:width, ease:"slow", delay: 5});
+        gsap.from(".text2",{duration:2, y:width, ease:"slow", delay: 5});
 
         gsap.to('.container__animation', {backgroundColor:'transparent', delay: 5});
         gsap.to('.container__animation', {height:"auto", delay: 5});
