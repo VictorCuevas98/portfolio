@@ -1,0 +1,102 @@
+/*--------------- ANIMATION ------------------*/
+.container__animation {
+    background: var(--color-bg);
+    height: 100%;
+    padding-bottom: 1rem;
+    position: fixed;
+    width: max-content;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 2;
+}
+
+#svg1,
+#svg2 {
+    visibility: hidden;
+}
+
+.cls-1 {
+    fill: none;
+    stroke: #fcfcfc;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+}
+
+.cls-2 {
+    fill: none;
+    stroke: #fcfcfc;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+}
+
+.pen {
+    position: fixed;
+    top: 49%;
+    left: 52%;
+    transform: translate(-50%, 0);
+    /*---------row class from bootstrap--------*/
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+    /*------------end boostrap css ----------*/
+}
+
+.container__greetings {
+    position: absolute;
+    width: 300px;
+    padding: 0;
+    left: calc(50% - 150px);
+    text-align: center;
+}
+
+#role,
+#name,
+#hello {
+    position: absolute;
+    padding: 0;
+}
+
+.pen1,
+.pen2 {
+    padding: 0px;
+    width: 150px;
+    /*---------col-6 class from bootstrap--------*/
+    flex: 0 0 auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    /*---------end bootstrap css--------*/
+}
+
+p.t2 {
+    color: transparent;
+    font-size: 10px;
+}
+
+p.t3 {
+    color: transparent;
+    font-size: 0px;
+}
+
+/* Media querys (Small devices) */
+@media screen and (max-width: 600px) {
+
+    .pen1,
+    .pen2 {
+        width: 84px;
+    }
+
+    p.t2 {
+        font-size: 0.6em;
+    }
+
+    p.t3 {
+        font-size: 0.1em;
+    }
+}
