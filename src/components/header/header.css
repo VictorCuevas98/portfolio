@@ -47,30 +47,6 @@ header {
 
 }
 
-
-
-/*------------ Image Me -----------------*/
-.me {
-    background: linear-gradient(var(--color-primary), #666A73, #353540, transparent);
-    border-radius: 12rem 12rem 0rem 0rem;
-    height: 30rem;
-    margin-left: calc(50% - 11rem);
-    margin-top: 4rem;
-    width: 22rem;
-
-}
-
-
-
-/*-------------- SCROLL DOWN ---------------*/
-.switch {
-    bottom: 3rem;
-    position: fixed;
-    right: 4rem;
-
-}
-
-
 /* Media querys (Medium devices) */
 @media screen and (max-width: 1024px) {
     header {
@@ -85,8 +61,7 @@ header {
 /* Media querys (Small devices) */
 @media screen and (max-width: 600px) {
 
-    .header__socials,
-    .switch {
+    .header__socials{
         display: none;
 
     }

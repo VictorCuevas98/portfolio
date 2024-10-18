@@ -1,20 +1,16 @@
 import React, { useRef } from "react";
 import "./header.css";
-import Buttons from "./CV";
-import ME from "../../assets/me.png";
-import HeaderSocial from "./HeaderSocial";
 import Animation from "../animation/Animation";
+import Buttons from "./Buttons";
+import Me from "./me/Me";
 
 const Header = () => {
   return (
     <header>
       <div className="container header__container">
-        <Animation /> <Buttons /> 
-        <div className="me">
-          <img src={ME} alt="me" />
-        </div>
-        <HeaderSocial />
-        {/*<ToggleSwitch label='Idioma'/>*/}
+        <Animation /> 
+        <Buttons /> 
+        <Me />
       </div>
     </header>
   );
