@@ -3,7 +3,7 @@ import { useLanguage } from "../../../context/LanguageContext";
 
 function ToggleSwitch (){
 
-  const { language, handleLanguageChange } = useLanguage();
+  const { language, handleLanguageChange, getTranslation } = useLanguage();
 
   return (
     <div className="switch-container">
@@ -17,7 +17,7 @@ function ToggleSwitch (){
           onChange={handleLanguageChange}  
         />
         <div>
-          <span>Spanish</span>
+          <span>{getTranslation("es")}</span>
         </div>
       </label>
       <label className="switch switch-cointainer-2">
@@ -30,7 +30,7 @@ function ToggleSwitch (){
           onChange={handleLanguageChange}
         />
         <div>
-          <span>English</span>
+          <span>{getTranslation("en")}</span>
         </div>
       </label>
       <label className="switch switch-cointainer-3">
@@ -43,7 +43,7 @@ function ToggleSwitch (){
         onChange={handleLanguageChange}
         />
         <div>
-          <span>日本語</span>
+          <span>{getTranslation("jp")}</span>
         </div>
       </label>
     </div>
