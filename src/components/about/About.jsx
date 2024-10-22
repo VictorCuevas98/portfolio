@@ -9,8 +9,11 @@ import {BiBookBookmark} from 'react-icons/bi'
 import {MdWorkOutline} from 'react-icons/md'
 import { gsap } from "gsap"
 import gsapCore from 'gsap/gsap-core'
+import { useLanguage } from '../../context/LanguageContext'
 
 const About = () => {  
+
+    const { getTranslation } = useLanguage();
     // wait until DOM has been rendered  
     useEffect(() => {    
         let count = 0;    
@@ -40,8 +43,8 @@ const About = () => {
     });  
     return (    
         <section id='about'>      
-            <h5>Get To Know</h5>      
-            <h2>About Me</h2>      
+            <h5>{getTranslation("gtk")}</h5>      
+            <h2>{getTranslation("am")}</h2>      
             <div className="container about__container">        
                 <dir className="about__me">          
                     <div className='about__me-image'>            
