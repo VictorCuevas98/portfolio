@@ -1,6 +1,7 @@
 nav {
     backdrop-filter: blur(15px);
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
+    background: rgba(201, 201, 201, 0.301);
     border-radius: 3rem;
     top: 2rem;
     bottom: 2rem;
@@ -12,6 +13,7 @@ nav {
     display: flex; 
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 1rem;
 }
 
 nav a {
