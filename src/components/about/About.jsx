@@ -10,8 +10,6 @@ import { MdWorkOutline } from "react-icons/md";
 import { useLanguage } from "../../context/LanguageContext";
 import Carousel from "react-bootstrap/Carousel";
 
-const images = [image1, image2, image3];
-
 const About = () => {
   const { getTranslation } = useLanguage();
 
@@ -55,31 +53,29 @@ const About = () => {
             <div className="about__cards">
               <article className="about__card">
                 <BiBookBookmark className="about__icon" />
-                <h5>Education</h5>
-                <small>Bechalor's Computer Systems</small>
+                <h5>{getTranslation("ed")}</h5>
+                <small>{getTranslation("ed_desc")}</small>
               </article>
               <article className="about__card">
                 <MdWorkOutline className="about__icon" />
-                <h5>Experience</h5>
-                <small>4+ experience years</small>
+                <h5>{getTranslation("exp")}</h5>
+                <small>{getTranslation("exp_desc")}</small>
               </article>
               <article className="about__card">
                 <FaAward className="about__icon" />
-                <h5>English Advance</h5>
+                <h5>{getTranslation("eng")}</h5>
                 <small>
                   <a className="link" href={certificate} target="__blank">
-                    Certificate of Level
+                    {getTranslation("eng_desc")}
                   </a>
                 </small>
               </article>
             </div>
             <p>
-              Developer full time, excited about tecnology and passionate to
-              create new projects chanllenging. I'm always find myself learning
-              something by my own, enjoying the proccess of improvment.
+              {getTranslation("about_desc")}
             </p>
             <a href="#contact" className="btn btn-primary">
-              Let's Talk
+              {getTranslation("talk")}
             </a>
           </div>
         </div>

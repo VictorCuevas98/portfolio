@@ -7,6 +7,13 @@ export const translations = {
     jp: "Japanese",
     gtk: "Get To Know",
     am: "About Me",
+    ed: "Education",
+    ed_desc: "Bechalor's Computer Systems",
+    exp: "Experience",
+    exp_desc: "4+ experience years",
+    eng: "English Advance",
+    eng_desc: "Certificate of Level",
+    about_desc: "Software developer, competitive and eager to face new challenges. Passionate about lenguages and programming.",
   },
   es: {
     downloadbtn: "Descargar CV",
@@ -16,6 +23,13 @@ export const translations = {
     jp: "Japones",
     gtk: "Un Poco Más",
     am: "Sobre Mi",
+    ed: "Educación",
+    ed_desc: "Licenciatura en Sistemas Computacionales",
+    exp: "Experiencia",
+    exp_desc: "4+ años de experiencia",
+    eng: "Inglés Avanzado",
+    eng_desc: "Certificado de Nivel",
+    about_desc: "Desarrollador de software, competitivo y ansioso por enfrentar nuevos desafíos. Apasionado por los idiomas y la programación..",
   },
   jp: {
     downloadbtn: "履歴書をダウンロード",
@@ -25,5 +39,12 @@ export const translations = {
     jp: "日本語",
     gtk: "私についてもっと",
     am: "知ってください",
+    ed: "教育", //学歴 (gakureki)
+    ed_desc: "コンピュータサイエンスの学士", //gakushi
+    exp: "経験", //keiken
+    exp_desc: "4年の経験",
+    eng: "英語上級",
+    eng_desc: "レベル証明書",
+    about_desc: "ソフトウェア開発者として、競争力があり、新しい課題に挑戦することに意欲的です。言語とプログラミングに情熱を持っています。",
   },
 };
