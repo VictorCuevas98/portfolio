@@ -6,27 +6,21 @@ import Zanate from "../../assets/portfolio/zanate.jpg";
 import McmVideo from "../../assets/videos/videocontrol.mp4";
 const data = [
   {
-    id: 1,
-    image: Mcm,
-    title: "Infosys Experience and Trainings code",
-    github: "https://github.com/VictorCuevas98/controlmerma"
-  },
-  {
-    id: 2,
+    id: 1   ,
     image: Saica,
     title: "Sistema de Abasto, Inventario y Control de Almacenes",
     github: "https://github.com/VictorCuevas98/saica",
     demo: "https://tics.finanzas.cdmx.gob.mx/saica/public/login",
   },
   {
-    id: 3,
+    id: 2,
     image: Zanate,
     title: "Pagina web empresarial",
     github: "https://github.com/ZanateDesign/zanatedesign.github.io",
     demo: "https://zanatedesign.github.io",
   },
   {
-    id: 4,
+    id: 3,
     image: Mcm,
     title: "University Project",
     github: "https://github.com/VictorCuevas98/controlmerma",

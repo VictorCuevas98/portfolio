@@ -1,0 +1,112 @@
+.workingon__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+    .workingon__container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .workingon__container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Chat gpt */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Styling */
+  .resume {
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .resume-content {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    color: #0dcaf0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0dcaf0;
+    padding-bottom: 5px;
+  }
+  
+  /* Timeline Styling */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #0dcaf0;
+  }
+  
+  .timeline-item {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    max-width: 500px;
+  }
+  
+  .timeline-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .company {
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #0dcaf0;
+  }
+
+  .timeline .footer__socials {
+    margin-bottom: 0;
+}
+

@@ -18,9 +18,6 @@ const Footer = () => {
           <a href="#">About</a>
         </li>{" "}
         <li>
-          <a href="#">Experience</a>
-        </li>{" "}
-        <li>
           <a href="#">Portfolio</a>
         </li>{" "}
         <li>
