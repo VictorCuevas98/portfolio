@@ -91,7 +91,7 @@ const Animation = () => {
     <div className="container__animation">
       <div className="pen">
         <div className="pen1">
-          <p class="t2">texto</p>
+          <p className="t2">texto</p>
           <svg
             id="svg1"
             data-name="Capa 1"
@@ -127,7 +127,7 @@ const Animation = () => {
           </svg>
         </div>
         <div className="pen2">
-          <p class="t3">texto</p>
+          <p className="t3">texto</p>
           <svg
             id="svg2"
             data-name="Capa 1"
