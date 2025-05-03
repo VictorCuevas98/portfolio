@@ -7,8 +7,8 @@ const Animation = () => {
   // store a reference to the box div
   const boxRef = useRef();
   // wait until DOM has been rendered
-  const timer = setTimeout(() => {
-    useEffect(() => {
+  window.addEventListener("load", () => {
+    // GSAP animation
         var width = 390;
         function myFunction(x) {
           if (x.matches) {
@@ -87,8 +87,7 @@ const Animation = () => {
           .to(".text1", { duration: 2, text: "Hello" })
           .to(".text2", { duration: 2, text: "I'm Victor" });
         //.to(\"#text1\",{duration:3, text: \"Victor Cuevas\"});
-      });
-  }, 1000); // wait a bit
+    }); // wait a bit
 
   return (
     <div className="container__animation">
