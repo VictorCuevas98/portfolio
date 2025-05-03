@@ -7,86 +7,89 @@ const Animation = () => {
   // store a reference to the box div
   const boxRef = useRef();
   // wait until DOM has been rendered
-  useEffect(() => {
-    var width = 390;
-    function myFunction(x) {
-      if (x.matches) {
-        // If media query matches
-        width = 250;
-        console.log("width 800px");
-      } else {
-        width = 390;
-        console.log("width +800px");
-      }
-    }
-    var x = window.matchMedia("(max-width: 800px)");
-    myFunction(x);
-    // Call listener function at run time
-    //x.addListener(myFunction)
-    // Attach listener function on state changes
-    //my first code line with gsap in React
-    //gsap.to(boxRef.current, { rotation: \"+=360\" });
-    gsap.registerPlugin(TextPlugin);
-    //this is to show the pen
-    gsap.set(".cls-1", { visibility: "visible" });
-    gsap.set(".cls-2", { visibility: "visible" });
-    gsap.from(".pen", { duration: 3, opacity: 0 });
-    //gsap.set(\"body\", { visibility: \"visible\" });
-    //gsap.set(\"body\", { duration: 5, opacity: 0 });
-    gsap.to(".pen2", {
-      duration: 3,
-      x: 1000,
-      opacity: 0,
-      ease: "slow (0.3, 2, false)",
-      delay: 3,
-    });
-    gsap.to(".pen1", {
-      duration: 3,
-      x: -1000,
-      opacity: 0,
-      ease: "slow (0.1, 0.1, false)",
-      delay: 3,
-    });
-    gsap.to(".text1", { duration: 1, text: "Hello", delay: 3 });
-    gsap.to(".text2", { duration: 1, text: "I'm Victor", delay: 4 });
-    gsap.from(".text1", { duration: 2, y: width, ease: "slow", delay: 5 });
-    gsap.from(".text2", { duration: 2, y: width, ease: "slow", delay: 5 });
-    /*gsap.to(".container__animation", {
-      backgroundColor: "transparent",
-      delay: 5,
-    });*/
-    gsap.to(".container__animation", { duration:2, height: "auto", delay: 5 });
-    gsap.to(".container__animation", { position: "absolute", delay: 7 });
-    gsap.to("#root", { position: "relative", delay: 7 });
-    // gsap.to("nav", { display: "flex", delay: 7 });
-    //TweenLite.to(\"#redBox\", 2, {backgroundColor:\"rgba(255, 0, 0, 0.2)\", rotation:45, delay:0.5})
-    const lt = gsap.timeline({ repeat: 10, repeatDelay: 2, delay: 7 });
-    lt.to(".text1", { duration: 2, text: "|" })
-      .to(".text1", { duration: 0, text: "" })
-      .to(".text2", { duration: 2, text: "|" })
-      .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "Bonjour" })
-      .to(".text2", { duration: 2, text: "Je m'appelle Victor" })
-      .to(".text1", { duration: 2, text: "|" })
-      .to(".text1", { duration: 0, text: "" })
-      .to(".text2", { duration: 2, text: "|" })
-      .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "こんにちは" })
-      .to(".text2", { duration: 2, text: "私は ビクター です" })
-      .to(".text1", { duration: 2, text: "|" })
-      .to(".text1", { duration: 0, text: "" })
-      .to(".text2", { duration: 2, text: "|" })
-      .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "Hola" })
-      .to(".text2", { duration: 2, text: "Me llamo Victor" })
-      .to(".text1", { duration: 2, text: "|" })
-      .to(".text1", { duration: 0, text: "" })
-      .to(".text2", { duration: 2, text: "|" })
-      .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "Hello" })
-      .to(".text2", { duration: 2, text: "I'm Victor" });
-    //.to(\"#text1\",{duration:3, text: \"Victor Cuevas\"});
-  });
+  const timer = setTimeout(() => {
+    useEffect(() => {
+        var width = 390;
+        function myFunction(x) {
+          if (x.matches) {
+            // If media query matches
+            width = 250;
+            console.log("width 800px");
+          } else {
+            width = 390;
+            console.log("width +800px");
+          }
+        }
+        var x = window.matchMedia("(max-width: 800px)");
+        myFunction(x);
+        // Call listener function at run time
+        //x.addListener(myFunction)
+        // Attach listener function on state changes
+        //my first code line with gsap in React
+        //gsap.to(boxRef.current, { rotation: \"+=360\" });
+        gsap.registerPlugin(TextPlugin);
+        //this is to show the pen
+        gsap.set(".cls-1", { visibility: "visible" });
+        gsap.set(".cls-2", { visibility: "visible" });
+        gsap.from(".pen", { duration: 3, opacity: 0 });
+        //gsap.set(\"body\", { visibility: \"visible\" });
+        //gsap.set(\"body\", { duration: 5, opacity: 0 });
+        gsap.to(".pen2", {
+          duration: 3,
+          x: 1000,
+          opacity: 0,
+          ease: "slow (0.3, 2, false)",
+          delay: 3,
+        });
+        gsap.to(".pen1", {
+          duration: 3,
+          x: -1000,
+          opacity: 0,
+          ease: "slow (0.1, 0.1, false)",
+          delay: 3,
+        });
+        gsap.to(".text1", { duration: 1, text: "Hello", delay: 3 });
+        gsap.to(".text2", { duration: 1, text: "I'm Victor", delay: 4 });
+        gsap.from(".text1", { duration: 2, y: width, ease: "slow", delay: 5 });
+        gsap.from(".text2", { duration: 2, y: width, ease: "slow", delay: 5 });
+        /*gsap.to(".container__animation", {
+          backgroundColor: "transparent",
+          delay: 5,
+        });*/
+        gsap.to(".container__animation", { duration:2, height: "auto", delay: 5 });
+        gsap.to(".container__animation", { position: "absolute", delay: 7 });
+        gsap.to("#root", { position: "relative", delay: 7 });
+        // gsap.to("nav", { display: "flex", delay: 7 });
+        //TweenLite.to(\"#redBox\", 2, {backgroundColor:\"rgba(255, 0, 0, 0.2)\", rotation:45, delay:0.5})
+        const lt = gsap.timeline({ repeat: 10, repeatDelay: 2, delay: 7 });
+        lt.to(".text1", { duration: 2, text: "|" })
+          .to(".text1", { duration: 0, text: "" })
+          .to(".text2", { duration: 2, text: "|" })
+          .to(".text2", { duration: 0, text: "" })
+          .to(".text1", { duration: 2, text: "Bonjour" })
+          .to(".text2", { duration: 2, text: "Je m'appelle Victor" })
+          .to(".text1", { duration: 2, text: "|" })
+          .to(".text1", { duration: 0, text: "" })
+          .to(".text2", { duration: 2, text: "|" })
+          .to(".text2", { duration: 0, text: "" })
+          .to(".text1", { duration: 2, text: "こんにちは" })
+          .to(".text2", { duration: 2, text: "私は ビクター です" })
+          .to(".text1", { duration: 2, text: "|" })
+          .to(".text1", { duration: 0, text: "" })
+          .to(".text2", { duration: 2, text: "|" })
+          .to(".text2", { duration: 0, text: "" })
+          .to(".text1", { duration: 2, text: "Hola" })
+          .to(".text2", { duration: 2, text: "Me llamo Victor" })
+          .to(".text1", { duration: 2, text: "|" })
+          .to(".text1", { duration: 0, text: "" })
+          .to(".text2", { duration: 2, text: "|" })
+          .to(".text2", { duration: 0, text: "" })
+          .to(".text1", { duration: 2, text: "Hello" })
+          .to(".text2", { duration: 2, text: "I'm Victor" });
+        //.to(\"#text1\",{duration:3, text: \"Victor Cuevas\"});
+      });
+  }, 1000); // wait a bit
+
   return (
     <div className="container__animation">
       <div className="pen">
