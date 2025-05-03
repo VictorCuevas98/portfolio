@@ -8,12 +8,12 @@ const Animation = () => {
   const boxRef = useRef();
   // wait until DOM has been rendered
   useEffect(() => {
-    const pen = document.querySelector(".pen");
-    if (pen) {
-      pen.style.border = "4px solid red"; // force visibility
-    } else {
-      alert("Element with class .pen not found!");
-    }
+    // const pen = document.querySelector(".pen");
+    // if (pen) {
+    //   pen.style.border = "4px solid red"; // force visibility
+    // } else {
+    //   alert("Element with class .pen not found!");
+    // }
 
         // GSAP animation
         var width = 390;
