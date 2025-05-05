@@ -8,27 +8,6 @@ const Animation = () => {
   const boxRef = useRef();
   // wait until DOM has been rendered
   useEffect(() => {
-    const pen = document.querySelector(".pen");
-    if (pen) {
-      pen.style.border = "4px solid red"; // force visibility
-    } else {
-      alert("Element with class .pen not found!");
-    }
-
-    const pen1 = document.querySelector(".pen1");
-    if (pen1) {
-      pen1.style.border = "4px solid red"; // force visibility
-    } else {
-      alert("Element with class .pen not found!");
-    }
-
-    const pen2 = document.querySelector(".pen2");
-    if (pen2) {
-      pen2.style.border = "4px solid red"; // force visibility
-    } else {
-      alert("Element with class .pen not found!");
-    }
-
     // GSAP animation
     var width = 390;
     function myFunction(x) {
@@ -52,6 +31,7 @@ const Animation = () => {
     //this is to show the pen
     gsap.set(".cls-1", { visibility: "visible" });
     gsap.set(".cls-2", { visibility: "visible" });
+    gsap.set("#svg1, #svg2", { visibility: "visible" });
     gsap.from(".pen", { duration: 3, opacity: 0 });
     //gsap.set(\"body\", { visibility: \"visible\" });
     //gsap.set(\"body\", { duration: 5, opacity: 0 });
