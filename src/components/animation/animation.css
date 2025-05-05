@@ -12,14 +12,8 @@
     z-index: 2;
 }
 
-svg {
-    width: 100%;
-    height: auto;
-}
-
 #svg1,
 #svg2 {
-    visibility: hidden;
     width: 100%;
     height: auto;
 }
@@ -40,9 +34,6 @@ svg {
 
 .pen {
     position: fixed;
-    top: 49%;
-    left: 52%;
-    transform: translate(-50%, 0);
     /*---------row class from bootstrap--------*/
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -63,8 +54,7 @@ svg {
 }
 
 #role,
-#name,
-#hello {
+#name{
     position: absolute;
     padding: 0;
 }

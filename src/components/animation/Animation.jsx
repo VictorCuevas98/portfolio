@@ -1,14 +1,12 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { useEffect } from "react";
 import "./animation.css";
 const Animation = () => {
-  // store a reference to the box div
-  const boxRef = useRef();
   // wait until DOM has been rendered
   useEffect(() => {
-    // GSAP animation
     var width = 390;
     function myFunction(x) {
       if (x.matches) {
@@ -22,56 +20,80 @@ const Animation = () => {
     }
     var x = window.matchMedia("(max-width: 800px)");
     myFunction(x);
-    // Call listener function at run time
-    //x.addListener(myFunction)
-    // Attach listener function on state changes
-    //my first code line with gsap in React
-    //gsap.to(boxRef.current, { rotation: \"+=360\" });
+    
+    // GSAP animation
+    gsap.registerPlugin(DrawSVGPlugin) 
     gsap.registerPlugin(TextPlugin);
     //this is to show the pen
-    gsap.set(".cls-1", { visibility: "visible" });
-    gsap.set(".cls-2", { visibility: "visible" });
-    gsap.set("#svg1, #svg2", { visibility: "visible" });
-    gsap.from(".pen", { duration: 3, opacity: 0 });
-    //gsap.set(\"body\", { visibility: \"visible\" });
-    //gsap.set(\"body\", { duration: 5, opacity: 0 });
+    
+    // gsap.set(".cls-1", { visibility: "visible" });
+    // gsap.set(".cls-2", { visibility: "visible" });
+    //  gsap.set("#svg1, #svg2", { visibility: "visible" });
 
-    gsap.to(".pen2", {
+    //Drawing a pen
+    var tl1 = gsap.timeline({
+        //repeat: -1,
+        defaults:{ duration: 0.70, ease: 'power1.inOut' }
+    })          
+    .from('#cls-2-5', {stagger: 0.1, drawSVG: 0 })
+
+    .from('#cls-2-2', {stagger: 0.1, drawSVG: 0 })
+    .from('#cls-2-3', {stagger: 0.1, drawSVG: 0 })
+    
+    .from('#cls-2-6', {stagger: 0.1, drawSVG: 0 })
+    
+    .from('#cls-2-1', {stagger: 0.1, drawSVG: 0 })
+    .fromTo('#cls-1-1', {stagger: 0.1, drawSVG: "100% 100%" }, {drawSVG: "100% 0"})
+    .from('#cls-2-4', {stagger: 0.1, drawSVG: 0 })
+    .from('#cls-1-2', {stagger: 0.1, drawSVG: 0 })
+    
+    .from('#cls-1-3', {stagger: 0.1, drawSVG: 0 })    
+    .from('#cls-1-4', {stagger: 0.1, drawSVG: 0 })    
+    .from('#cls-1-5', {stagger: 0.1, drawSVG: 0 })    
+
+    
+    /* Opening the pen */
+    .to(".pen2", {
       duration: 3,
       x: 1000,
       opacity: 0,
       ease: "slow (0.3, 2, false)",
-      delay: 3,
-    });
-    gsap.to(".pen1", {
+    })
+    .to(".pen1", {
       duration: 3,
-      x: -1000,
-      opacity: 0,
-      ease: "slow (0.1, 0.1, false)",
-      delay: 3,
-    });
-    gsap.to(".text1", { duration: 1, text: "Hello", delay: 3 });
-    gsap.to(".text2", { duration: 1, text: "I'm Victor", delay: 4 });
-    gsap.from(".text1", { duration: 2, y: width, ease: "slow", delay: 5 });
-    gsap.from(".text2", { duration: 2, y: width, ease: "slow", delay: 5 });
+      x: -1000, 
+      opacity: 0, 
+      ease: "slow (0.1, 0.1, false)"},"<") // "<" means start at the same time as previous
 
-    gsap.to(".container__animation", { duration: 2, height: "auto", delay: 5 });
-    gsap.to(".container__animation", { position: "absolute", delay: 7 });
-    gsap.to("#root", { position: "relative", delay: 7 });
+    /* Showing the website*/
+    .to(".text1", { duration: 1, text: "|" }, "-=3") 
+    .to(".text1", { duration: 0, text: "" })
+    .to(".text2", { duration: 2, text: "|" })
+    .to(".text2", { duration: 0, text: "" })
+    .to(".text1", { duration: 1, text: "こんにちは"})
+    .to(".text2", { duration: 1, text: "私は ビクターです。"})
+    .from(".text1", { duration: 2, y: width, ease: "slow"})
+    .from(".text2", { duration: 2, y: width, ease: "slow"}, "<") // "<" means start at the same time as previous
 
-    const lt = gsap.timeline({ repeat: 10, repeatDelay: 2, delay: 7 });
-    lt.to(".text1", { duration: 2, text: "|" })
+    // Animation that shows the rest of the website (cortain going up)
+    .to(".container__animation", { duration: 2, height: "auto", delay: 1 })
+    .to(".container__animation", { position: "absolute"})
+    .to("#root", { position: "relative"});
+
+    // Words animation 
+    var tl2 = gsap.timeline({ repeat: -1, repeatDelay: 2})
+      .to(".text1", { duration: 2, text: "|" })
+      .to(".text1", { duration: 0, text: "" })
+      .to(".text2", { duration: 2, text: "|" })
+      .to(".text2", { duration: 0, text: "" })
+      .to(".text1", { duration: 2, text: "Hello" })
+      .to(".text2", { duration: 2, text: "I'm Victor" })
+      .to(".text1", { duration: 2, text: "|" })
       .to(".text1", { duration: 0, text: "" })
       .to(".text2", { duration: 2, text: "|" })
       .to(".text2", { duration: 0, text: "" })
       .to(".text1", { duration: 2, text: "Bonjour" })
       .to(".text2", { duration: 2, text: "Je m'appelle Victor" })
-      .to(".text1", { duration: 2, text: "|" })
-      .to(".text1", { duration: 0, text: "" })
-      .to(".text2", { duration: 2, text: "|" })
-      .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "こんにちは" })
-      .to(".text2", { duration: 2, text: "私は ビクター です" })
       .to(".text1", { duration: 2, text: "|" })
       .to(".text1", { duration: 0, text: "" })
       .to(".text2", { duration: 2, text: "|" })
@@ -82,14 +104,18 @@ const Animation = () => {
       .to(".text1", { duration: 0, text: "" })
       .to(".text2", { duration: 2, text: "|" })
       .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "Hello" })
-      .to(".text2", { duration: 2, text: "I'm Victor" });
-    //.to(\"#text1\",{duration:3, text: \"Victor Cuevas\"});
-  }, []);
+      .to(".text1", { duration: 2, text: "こんにちは" })
+      .to(".text2", { duration: 2, text: "私は ビクター です。" });
+    // Main timeline that runs them in sequence
+    var master = gsap.timeline();
+        master.add(tl1)      // tl1 runs first
+              .add(tl2);     // tl2 starts after tl1 finishes
+
+    }, []);
 
   return (
     <div className="container__animation">
-      <div className="pen">
+      <div className="pen top-50 start-50 translate-middle">
         <div className="pen1 d-flex flex-column justify-content-end">
           <svg
             id="svg1"
@@ -99,27 +125,27 @@ const Animation = () => {
           >
             <title>pluma punta</title>
             <path
-              className="cls-1"
+              className="cls-1" id="cls-1-1"
               d="M114,31.51l-37.25.63C58.5,32.76,44,33.51,44,33.51v15C56.79,49.17,76,50,93.21,50.26l20.75.25"
               transform="translate(-7.35 -31.01)"
             />
             <path
-              className="cls-1"
+              className="cls-1" id="cls-1-2"
               d="M113.93,37.51h-66v-2l66.1-.73"
               transform="translate(-7.35 -31.01)"
             />
             <path
-              className="cls-1"
+              className="cls-1" id="cls-1-3"
               d="M42,33.51v15s-26-2-29-6v-3S18,35.51,42,33.51Z"
               transform="translate(-7.35 -31.01)"
             />
             <path
-              className="cls-1"
+              className="cls-1" id="cls-1-4"
               d="M16,41.51H40v5s-16,0-24-4Z"
               transform="translate(-7.35 -31.01)"
             />
             <path
-              className="cls-1"
+              className="cls-1" id="cls-1-5"
               d="M11,39.51V42S4,41.18,11,39.51Z"
               transform="translate(-7.35 -31.01)"
             />
@@ -134,32 +160,32 @@ const Animation = () => {
           >
             <title>Pluma 2</title>
             <path
-              className="cls-2"
+              className="cls-2" id="cls-2-1"
               d="M1,31.51H19v19H0"
               transform="translate(0.04 -18.98)"
             />
             <path
-              className="cls-2"
+              className="cls-2" id="cls-2-2"
               d="M21,31.51v19H91a2.94,2.94,0,0,0,3-2.88V34.51s0-3-4-3Z"
               transform="translate(0.04 -18.98)"
             />
             <path
-              className="cls-2"
+              className="cls-2" id="cls-2-3"
               d="M23,34.51v3H90s1-3-2-3Z"
               transform="translate(0.04 -18.98)"
             />
             <path
-              className="cls-2"
+              className="cls-2" id="cls-2-4"
               d="M.5,34.72,17,34.51v3H.23"
               transform="translate(0.04 -18.98)"
             />
             <path
-              className="cls-2"
+              className="cls-2" id="cls-2-5"
               d="M96,35.51v12h8s2,0,2-3v-7a2,2,0,0,0-2-2Z"
               transform="translate(0.04 -18.98)"
             />
             <path
-              className="cls-2"
+              className="cls-2" id="cls-2-6"
               d="M78,29.51s4-5-1-5-39,1-39,1-2,0-1,4c0,0-6,0-6-3,0,0-1-2,5-3s42-4,42-4,9-1,12,10Z"
               transform="translate(0.04 -18.98)"
             />
