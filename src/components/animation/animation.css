@@ -12,6 +12,12 @@
     z-index: 2;
 }
 
+svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 #svg1,
 #svg2 {
     visibility: hidden;
