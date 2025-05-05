@@ -42,46 +42,6 @@
     position: absolute
 }
 
-.pen1,
-.pen2 {
-    flex: 0 0 auto;
-    flex-basis: auto;
-    flex-grow: 0;
-    flex-shrink: 0;
-    padding: 0;
-    width: 150px
-}
-
-p.t2 {
-    font-size: 10px
-}
-
-p.t2,
-p.t3 {
-    color: transparent
-}
-
-p.t3 {
-    font-size: 0
-}
-
-@media screen and (max-width:600px) {
-
-    .pen1,
-    .pen2 {
-        width: 84px
-    }
-
-    p.t2 {
-        font-size: .6em
-    }
-
-    p.t3 {
-        font-size: .1em
-    }
-}
-
-
 .container.container__contact {
     grid-gap: 12%;
     display: grid;
@@ -226,7 +186,7 @@ html {
 }
 
 body {
-    background: var(--color-bg);
+    background: var(--color-bg); 
     color: var(--color-white);
     font-family: Roboto, sans-serif;
     line-height: 1.7

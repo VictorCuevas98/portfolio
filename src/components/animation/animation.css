@@ -13,7 +13,6 @@
 }
 
 svg {
-    display: block;
     width: 100%;
     height: auto;
 }
@@ -74,22 +73,15 @@ svg {
 .pen2 {
     padding: 0px;
     width: 150px;
-    /*---------col-6 class from bootstrap--------*/
-    flex: 0 0 auto;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: auto;
-    /*---------end bootstrap css--------*/
+    height: 50px;
 }
 
-p.t2 {
-    color: transparent;
-    font-size: 10px;
-}
-
-p.t3 {
-    color: transparent;
-    font-size: 0px;
+/* Media querys (Medium devices) */
+@media screen and (max-width: 1024px) {
+    .pen1,
+    .pen2{
+        width: 110px;
+    }
 }
 
 /* Media querys (Small devices) */
@@ -100,11 +92,4 @@ p.t3 {
         width: 84px;
     }
 
-    p.t2 {
-        font-size: 0.6em;
-    }
-
-    p.t3 {
-        font-size: 0.1em;
-    }
 }

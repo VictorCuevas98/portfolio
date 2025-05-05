@@ -35,6 +35,7 @@ const Animation = () => {
     gsap.from(".pen", { duration: 3, opacity: 0 });
     //gsap.set(\"body\", { visibility: \"visible\" });
     //gsap.set(\"body\", { duration: 5, opacity: 0 });
+
     gsap.to(".pen2", {
       duration: 3,
       x: 1000,
@@ -53,15 +54,11 @@ const Animation = () => {
     gsap.to(".text2", { duration: 1, text: "I'm Victor", delay: 4 });
     gsap.from(".text1", { duration: 2, y: width, ease: "slow", delay: 5 });
     gsap.from(".text2", { duration: 2, y: width, ease: "slow", delay: 5 });
-    /*gsap.to(".container__animation", {
-          backgroundColor: "transparent",
-          delay: 5,
-        });*/
+
     gsap.to(".container__animation", { duration: 2, height: "auto", delay: 5 });
     gsap.to(".container__animation", { position: "absolute", delay: 7 });
     gsap.to("#root", { position: "relative", delay: 7 });
-    // gsap.to("nav", { display: "flex", delay: 7 });
-    //TweenLite.to(\"#redBox\", 2, {backgroundColor:\"rgba(255, 0, 0, 0.2)\", rotation:45, delay:0.5})
+
     const lt = gsap.timeline({ repeat: 10, repeatDelay: 2, delay: 7 });
     lt.to(".text1", { duration: 2, text: "|" })
       .to(".text1", { duration: 0, text: "" })
@@ -93,8 +90,7 @@ const Animation = () => {
   return (
     <div className="container__animation">
       <div className="pen">
-        <div className="pen1">
-          <p className="t2">texto</p>
+        <div className="pen1 d-flex flex-column justify-content-end">
           <svg
             id="svg1"
             data-name="Capa 1"
@@ -129,8 +125,7 @@ const Animation = () => {
             />
           </svg>
         </div>
-        <div className="pen2">
-          <p className="t3">texto</p>
+        <div className="pen2 d-flex flex-column justify-content-end">
           <svg
             id="svg2"
             data-name="Capa 1"
