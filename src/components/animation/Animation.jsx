@@ -72,12 +72,10 @@ const Animation = () => {
     .to(".text2", { duration: 0, text: "" })
     .to(".text1", { duration: 1, text: "こんにちは"})
     .to(".text2", { duration: 1, text: "私は ビクターです。"})
-    .from(".text1", { duration: 2, y: width, ease: "slow"})
-    .from(".text2", { duration: 2, y: width, ease: "slow"}, "<") // "<" means start at the same time as previous
+    .to(".container__animation", { position: "absolute"})
 
     // Animation that shows the rest of the website (cortain going up)
     .to(".container__animation", { duration: 2, height: "auto", delay: 1 })
-    .to(".container__animation", { position: "absolute"})
     .to("#root", { position: "relative"});
 
     // Words animation 
@@ -115,7 +113,7 @@ const Animation = () => {
 
   return (
     <div className="container__animation">
-      <div className="pen top-50 start-50 translate-middle">
+      <div className="pen position-absolute  top-50 start-50 translate-middle">
         <div className="pen1 d-flex flex-column justify-content-end">
           <svg
             id="svg1"
@@ -192,7 +190,7 @@ const Animation = () => {
           </svg>
         </div>
       </div>
-      <div className="container__greetings">
+      <div className="container__greetings position-absolute top-50 start-50 translate-middle">
         <h1 className="text1"></h1>
         <h2 className="text2"></h2>
       </div>

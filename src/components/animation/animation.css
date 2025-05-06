@@ -1,15 +1,25 @@
 /*--------------- ANIMATION ------------------*/
 .container__animation {
-    background: var(--color-bg);
-    height: 100%;
-    padding-bottom: 1rem;
     position: fixed;
-    width: max-content;
-    display: block;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    background: var(--color-bg);
+}
+
+.pen{
+    width: auto;
+    /*---------row class from bootstrap--------*/
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+    /*------------end boostrap css ----------*/
 }
 
 #svg1,
@@ -32,25 +42,14 @@
     stroke-miterlimit: 10;
 }
 
-.pen {
-    position: fixed;
-    /*---------row class from bootstrap--------*/
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -1);
-    margin-right: calc(var(--bs-gutter-x)/ -2);
-    margin-left: calc(var(--bs-gutter-x)/ -2);
-    /*------------end boostrap css ----------*/
-}
-
 .container__greetings {
-    position: absolute;
     width: 300px;
     padding: 0;
-    left: calc(50% - 150px);
-    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* left: calc(50% - 150px);
+    text-align: center; */
 }
 
 #role,
