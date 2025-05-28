@@ -7,10 +7,12 @@ import Me from "./me/Me";
 const Header = () => {
   return (
     <header>
-      <div className="container header__container">
-        <Animation /> 
-        <Buttons /> 
-        <Me />
+      <div className="container pt-2">
+        <div className="row">
+          <Animation /> 
+          <Buttons /> 
+          <Me />
+        </div>
       </div>
     </header>
   );

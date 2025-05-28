@@ -42,14 +42,13 @@
     stroke-miterlimit: 10;
 }
 
-.container__greetings {
-    width: 300px;
+.greetings {
     padding: 0;
-    top: 0;
+    /* top: 0;
     left: 50%;
     transform: translateX(-50%);
-    /* left: calc(50% - 150px);
-    text-align: center; */
+    left: calc(50% - 150px); */
+    text-align: center;
 }
 
 #role,
@@ -65,6 +64,12 @@
     height: 50px;
 }
 
+.text1,
+.text2,
+.t1,
+.t2{
+    min-height: 1em;
+}
 /* Media querys (Medium devices) */
 @media screen and (max-width: 1024px) {
     .pen1,

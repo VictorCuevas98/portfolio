@@ -6,7 +6,7 @@
     position: absolute
 }
 
-.container.container__contact {
+.container__contact {
     grid-gap: 12%;
     display: grid;
     gap: 12%;
@@ -79,14 +79,14 @@ textarea {
 }
 
 @media screen and (max-width:1024px) {
-    .container.container__contact {
+    .container__contact {
         gap: 2rem;
         grid-template-columns: 1fr
     }
 }
 
 @media screen and (max-width:600px) {
-    .container.container__contact {
+    .container__contact {
         width: var(--container-width-sm)
     }
 }
@@ -114,16 +114,6 @@ textarea {
     }
 }
 
-* {
-    border: 0;
-    box-sizing: border-box;
-    list-style: none;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    text-decoration: none
-}
-
 :root {
     --color-bg: #0d0b0c;
     --color-bg-variant: #2e2e2e;
@@ -136,6 +126,7 @@ textarea {
     --container-width-md: 85%;
     --container-width-sm: 95%;
 }
+
 #root{
     position: fixed;
     width: 100%;
@@ -153,18 +144,6 @@ body {
     background: var(--color-bg); 
     color: var(--color-white);
     font-family: Roboto, sans-serif;
-    line-height: 1.7
-}
-
-.bg-white {
-    background: #d7d7d9;
-    background: var(--color-white)
-}
-
-.container {
-    margin: 0 auto;
-    width: 75%;
-    width: var(--container-width-lg)
 }
 
 h1,
@@ -256,10 +235,6 @@ img {
 }
 
 @media screen and (max-width:1024px) {
-    .container {
-        width: 85%;
-        width: var(--container-width-md)
-    }
 
     section {
         margin-top: 6rem
@@ -267,14 +242,8 @@ img {
 }
 
 @media screen and (max-width:600px) {
-    .container {
-        width: 95%;
-        width: var(--container-width-sm)
-    }
 
     section>h2 {
         margin-bottom: 2rem
     }
 }
-
-/*# sourceMappingURL=main.652e5d04.css.map*/
