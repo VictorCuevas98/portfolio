@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import "./workingon.css";
 import Collapse from 'react-bootstrap/Collapse';
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import school from "../../assets/aboutme/school.jpeg";
 
 const data = [
     {
@@ -29,14 +30,20 @@ const Workingon = () => {
             {/* Experience Section */}
             <div className="timeline">
               <div className="timeline-item">
-                <h3>Lead UI Designer</h3>
-                <p className="company">Big Design Company, NY, USA</p>
+                <h3>ISIランゲージスクール新宿校</h3>
+                <p className="company">Japanese Language School, Tokyo, Japan</p>
                 <p className="description">
-                  Sit cupiditate praesentium ex esse nulla facere fuga
-                  perspicitatis eveniet providunt...
+                  Currently studying Japanese to fulfill my dream of speaking Japanese fluently in the near future.
+                  I am planning to take the JLPT N2 in June 2026.
                 </p>
-                <a style={{cursor: "pointer"}} onClick={() => setOpen(!open)}>Click to see more</a>
-              </div>
+                
+                <img
+                className="d-block w-100" 
+                src={school} 
+                alt="" />
+                </div>
+                {/* <a style={{cursor: "pointer"}} onClick={() => setOpen(!open)}>Click to see more</a>
+              
               <Collapse in={open} style={{height: "auto"}}>
                 <div className="footer__socials" id="example-collapse-text">
                     {" "}
@@ -47,7 +54,7 @@ const Workingon = () => {
                     <BsLinkedin />
                     </a>{" "}
                 </div>
-            </Collapse>
+            </Collapse> */}
             </div>
           </div>
         </Container>
