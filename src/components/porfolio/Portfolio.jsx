@@ -8,14 +8,14 @@ const data = [
   {
     id: 1   ,
     image: Saica,
-    title: "Sistema de Abasto, Inventario y Control de Almacenes",
+    title: "Supply, Inventory, and Warehouse Control System",
     github: "https://github.com/VictorCuevas98/saica",
     demo: "https://tics.finanzas.cdmx.gob.mx/saica/public/login",
   },
   {
     id: 2,
     image: Zanate,
-    title: "Pagina web empresarial",
+    title: "Business website",
     github: "https://github.com/ZanateDesign/zanatedesign.github.io",
     demo: "https://zanatedesign.github.io",
   },
