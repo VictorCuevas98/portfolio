@@ -1,17 +1,19 @@
-import React from "react";
 import PDF from "../../assets/cv.pdf";
-import { useLanguage } from "../../context/LanguageContext";
-function Buttons() {
 
-  const { getTranslation } = useLanguage();
+function Buttons() {
 
   return (
     <div className="cv">
       <a href={PDF} download className="btn">
-        {getTranslation("downloadbtn")}
+        Download CV (EN)
       </a>
-      <a href="#contact" className="btn btn-primary">
-        {getTranslation("talk")}
+
+      <a href={PDF} download className="btn">
+        履歴書をダウンロード (JP)
+      </a>
+
+      <a href={PDF} download className="btn">
+        Descargar CV (ES)
       </a>
     </div>
   );

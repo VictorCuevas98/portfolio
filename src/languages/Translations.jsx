@@ -1,7 +1,7 @@
 export const translations = {
   en: {
-    downloadbtn: "Download CV",
-    talk: "Let's talk",
+    close: "Close",
+    select_language: "Select your language",
     es: "Spanish",
     en: "English",
     jp: "Japanese",
@@ -29,8 +29,8 @@ export const translations = {
     
   },
   es: {
-    downloadbtn: "Descargar CV",
-    talk: "Hablemos",
+    close: "Cerrar",
+    select_language: "Selecciona un lenguage",
     es: "Español",
     en: "Inglés",
     jp: "Japones",
@@ -58,8 +58,8 @@ export const translations = {
     
   },
   jp: {
-    downloadbtn: "履歴書をダウンロード",
-    talk: "お話ませんか",
+    close:"閉まります",
+    select_language: "言語を選んでください",
     es: "スペイン語",
     en: "英語",
     jp: "日本語",

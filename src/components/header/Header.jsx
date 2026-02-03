@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
       <div className="container pt-2">
-        <div className="row">
+        <div className="row gap-4">
           <Animation /> 
           <Buttons /> 
           <Me />
