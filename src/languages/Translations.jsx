@@ -11,9 +11,8 @@ export const translations = {
     ed_desc: "Bechalor's Computer Systems",
     exp: "Experience",
     exp_desc: "4+ experience years",
-    eng: "English Advance",
     eng_desc: "Certificate of Level",
-    about_desc: "Software developer, competitive and eager to face new challenges. Passionate about lenguages and programming.",
+    about_desc: "Software developer who enjoys collaboration, learning languages, practicing sports, and understanding different perspectives of the world.",
     my_recent_work:"",
     portfolio:"",
     supply:"",
@@ -26,6 +25,10 @@ export const translations = {
     get_in:"",
     contact_me:"",
     send_message:"",
+
+    // ####### About ###########
+
+    languages:"Languages"
     
   },
   es: {
@@ -40,7 +43,6 @@ export const translations = {
     ed_desc: "Licenciatura en Sistemas Computacionales",
     exp: "Experiencia",
     exp_desc: "4+ años de experiencia",
-    eng: "Inglés Avanzado",
     eng_desc: "Certificado de Nivel",
     about_desc: "Desarrollador de software, competitivo y ansioso por enfrentar nuevos desafíos. Apasionado por los idiomas y la programación..",
     my_recent_work:"",
@@ -69,7 +71,6 @@ export const translations = {
     ed_desc: "コンピュータサイエンスの学士", //gakushi
     exp: "経験", //keiken
     exp_desc: "4年の経験",
-    eng: "英語上級",
     eng_desc: "レベル証明書",
     about_desc: "ソフトウェア開発者として、競争力があり、新しい課題に挑戦することに意欲的です。言語とプログラミングに情熱を持っています。",
     my_recent_work:"",

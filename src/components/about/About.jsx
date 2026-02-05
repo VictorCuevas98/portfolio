@@ -15,68 +15,53 @@ const About = () => {
 
   return (
     <section id="about">
-      <h5>{getTranslation("gtk")}</h5>
-      <h2>{getTranslation("am")}</h2>
       <div className="container about__container">
         <dir className="about__me">
+          <h5>{getTranslation("gtk")}</h5>
+          <h2>{getTranslation("am")}</h2>
           <Carousel>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-image"
-                src={image1}
-                alt=""
-              />
+            <Carousel.Item className="carousel-item">
+              <img className="d-block w-100 carousel-img" src={image1} alt="" />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-image"
-                src={image2}
-                alt=""
-              />
+            <Carousel.Item className="carousel-item">
+              <img className="d-block w-100 carousel-img" src={image2} alt="" />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100 carousel-image"
-                src={image3}
-                alt=""
-              />
+            <Carousel.Item className="carousel-item">
+              <img className="d-block w-100 carousel-img" src={image3} alt="" />
             </Carousel.Item>
           </Carousel>
-          {/* <div className='about__me-image'>               
-                        {images.map((image, index) => (
-                            <img key={index} src={image} alt={`Slide ${index + 1}`} />        
-                        ))}       
-                    </div>                           */}
         </dir>
         <div className="about__content">
           <div>
-            <div className="about__cards">
-              <article className="about__card">
-                <BiBookBookmark className="about__icon" />
-                <h5>{getTranslation("ed")}</h5>
-                <small>{getTranslation("ed_desc")}</small>
-              </article>
-              <article className="about__card">
-                <MdWorkOutline className="about__icon" />
-                <h5>{getTranslation("exp")}</h5>
-                <small>{getTranslation("exp_desc")}</small>
-              </article>
-              <article className="about__card">
-                <FaAward className="about__icon" />
-                <h5>{getTranslation("eng")}</h5>
-                <small>
-                  <a className="link" href={certificate} target="__blank">
-                    {getTranslation("eng_desc")}
-                  </a>
-                </small>
-              </article>
+            <div className="container text-center">
+              <div className="row align-items-center">
+                <div className="col">
+                  <article className="about__card">
+                    <BiBookBookmark className="about__icon" />
+                    <h5>{getTranslation("ed")}</h5>
+                  </article>
+                </div>
+
+                <div className="col">
+                  <article className="about__card">
+                    <MdWorkOutline className="about__icon" />
+                    <h5>{getTranslation("exp")}</h5>
+                  </article>
+                </div>
+                <div className="col">
+                  <article className="about__card">
+                    <FaAward className="about__icon" />
+                    <a className="link" href={certificate} target="__blank">
+                      <h5>{getTranslation("languages")}</h5>
+                    </a>
+                  </article>
+                </div>
+              </div>
             </div>
-            <p>
-              {getTranslation("about_desc")}
-            </p>
-            <a href="#contact" className="btn btn-primary">
+            <p>{getTranslation("about_desc")}</p>
+            {/* <a href="#contact" className="btn btn-primary">
               {getTranslation("talk")}
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

@@ -68,15 +68,15 @@ const Animation = () => {
         "<"
       ) // "<" means start at the same time as previous
 
-      .to(".pen", { position: "absolute" })// Making the pen invisible
+      .to(".pen", { display: "none" })// Making the pen invisible
       
       /* Showing the website*/
       .to(".text1", { duration: 0.5, text: "|" }, "-=2")
       .to(".text1", { duration: 0, text: "" })
       .to(".text2", { duration: 0.5, text: "|" })
       .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 1, text: "こんにちは" })
-      .to(".text2", { duration: 1, text: "私は ビクターです。" })
+      .to(".text1", { duration: 1, text: "お世話になります" })
+      .to(".text2", { duration: 1, text: "ビクターと申します。" })
 
       // Animation that shows the rest of the website (cortain going up)
 
@@ -111,8 +111,8 @@ const Animation = () => {
       .to(".text1", { duration: 0, text: "" })
       .to(".text2", { duration: 2, text: "|" })
       .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "こんにちは" })
-      .to(".text2", { duration: 2, text: "私は ビクター です。" });
+      .to(".text1", { duration: 2, text: "お世話になります" })
+      .to(".text2", { duration: 2, text: "ビクターと申します。" });
     // Main timeline that runs them in sequence
     var master = gsap.timeline();
     master

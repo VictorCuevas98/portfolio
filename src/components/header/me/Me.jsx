@@ -13,9 +13,6 @@ const Me = () => {
       <div className="element-me element-me-2">
         <img src={ME} alt="me" />
       </div>
-      <div className="element-me element-me-3">
-        <ToggleSwitch />
-      </div>
     </div>
   );
 };

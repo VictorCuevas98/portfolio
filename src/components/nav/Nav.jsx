@@ -14,7 +14,6 @@ const  Nav = () => {
 const [activeNav, setActiveNav] = useState('#')   
 const [popup, setShowPopup] = useState(false);
     return (    
-        <div>
             <nav>      
             <a href="#" className={activeNav === '#' ? 'active' : ''} onClick={() => setActiveNav('#')}>
                 <AiOutlineHome/>
@@ -28,13 +27,11 @@ const [popup, setShowPopup] = useState(false);
             <a href="#trasnlate" className={activeNav === '#translate' ? 'active' : ''} onClick={() => setShowPopup(true)}>
                 <PiTranslateBold/>
             </a>    
-        </nav>  
-
-        <PopupLanguages
+            <PopupLanguages
             show={popup}
-            handleClose={setShowPopup}        
+            handleClose={() => setShowPopup(false)}        
         />
-        </div>
+        </nav>  
     )
 }
 export default Nav

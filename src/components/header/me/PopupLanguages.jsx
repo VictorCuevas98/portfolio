@@ -4,12 +4,12 @@ import ToggleSwitch from "./ToggleSwitch";
 import { useLanguage } from "../../../context/LanguageContext";
 
 function PopupLanguages({ show, handleClose }) {
-    const { getLanguage } = useLanguage();
+    const { getTranslation } = useLanguage();
 
     return (
     <Modal show={show} onHide={handleClose} centered>
         <Modal.Header>
-            <Modal.Title>{getLanguage("select_language")}</Modal.Title>
+            <Modal.Title>{getTranslation("select_language")}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
@@ -17,7 +17,7 @@ function PopupLanguages({ show, handleClose }) {
         </Modal.Body>
 
         <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>{getLanguage("close")}</Button>
+            <Button variant="secondary" onClick={handleClose}>{getTranslation("close")}</Button>
         </Modal.Footer>
     </Modal>
 );
