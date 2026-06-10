@@ -34,7 +34,7 @@ const Workingon = () => {
                 <p className="company">Japanese Language School, Tokyo, Japan</p>
                 <p className="description">
                   Currently studying Japanese to fulfill my dream of speaking Japanese fluently in the near future.
-                  I am planning to take the JLPT N2 in June 2026.
+                  I am planning to take the JLPT N2 in December 2026.
                 </p>
                 
                 <img

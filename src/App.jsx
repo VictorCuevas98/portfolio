@@ -4,7 +4,6 @@ import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
 import About from "./components/about/About";
 import Portfolio from "./components/porfolio/Portfolio";
-import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Workingon from "./components/workingon/Workingon";
 const App = () => {
@@ -15,7 +14,6 @@ const App = () => {
       <About />
       <Portfolio />
       <Workingon />
-      <Contact />
       <Footer />
     </LanguageProvider>
   );

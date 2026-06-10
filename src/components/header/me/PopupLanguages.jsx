@@ -17,7 +17,7 @@ function PopupLanguages({ show, handleClose }) {
         </Modal.Body>
 
         <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>{getTranslation("close")}</Button>
+            <Button variant="primary" onClick={handleClose}>{getTranslation("close")}</Button>
         </Modal.Footer>
     </Modal>
 );

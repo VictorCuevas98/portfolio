@@ -1,9 +1,9 @@
 .switch {
-  --line: #505162;
-  --dot: #F7F8FF;
-  --circle: #9EA0BE;
+  --line: #ceced6;
+  --dot: #0d0b0c;
+  --circle: #737592;
   --duration: .3s;
-  --text: #9EA0BE;
+  --text: #181822;
   cursor: pointer;
   input {
       display: none;

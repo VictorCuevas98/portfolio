@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       {" "}
       <a href="#" className="footer__logo">
-        Web Developer
+        Software Engineer
       </a>{" "}
       <ul className="permalinks">
         {" "}
@@ -19,9 +19,6 @@ const Footer = () => {
         </li>{" "}
         <li>
           <a href="#">Portfolio</a>
-        </li>{" "}
-        <li>
-          <a href="#">Contact</a>
         </li>{" "}
       </ul>{" "}
       <div className="footer__socials">
@@ -37,7 +34,7 @@ const Footer = () => {
         {" "}
         <small>
           Develop and designed by{" "}
-          <a href="https://github.com/VictorCuevas98">Victor Cuevas</a>. © 2022
+          <a href="https://github.com/VictorCuevas98" className="text-color-black">Victor Cuevas</a>. © 2022
           All rights reserved
         </small>{" "}
       </div>{" "}

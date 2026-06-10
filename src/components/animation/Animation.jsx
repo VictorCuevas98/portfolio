@@ -75,7 +75,7 @@ const Animation = () => {
       .to(".text1", { duration: 0, text: "" })
       .to(".text2", { duration: 0.5, text: "|" })
       .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 1, text: "お世話になります" })
+      .to(".text1", { duration: 1, text: "お世話になっております" })
       .to(".text2", { duration: 1, text: "ビクターと申します。" })
 
       // Animation that shows the rest of the website (cortain going up)
@@ -111,7 +111,7 @@ const Animation = () => {
       .to(".text1", { duration: 0, text: "" })
       .to(".text2", { duration: 2, text: "|" })
       .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "お世話になります" })
+      .to(".text1", { duration: 2, text: "お世話になっております" })
       .to(".text2", { duration: 2, text: "ビクターと申します。" });
     // Main timeline that runs them in sequence
     var master = gsap.timeline();

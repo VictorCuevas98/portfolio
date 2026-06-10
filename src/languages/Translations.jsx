@@ -12,7 +12,7 @@ export const translations = {
     exp: "Experience",
     exp_desc: "4+ experience years",
     eng_desc: "Certificate of Level",
-    about_desc: "Software developer who enjoys collaboration, learning languages, practicing sports, and understanding different perspectives of the world.",
+    about_desc: "Software developer who enjoys collaboration and self-tought, passionate about languages, and a big fan of sports.",
     my_recent_work:"",
     portfolio:"",
     supply:"",
@@ -58,9 +58,12 @@ export const translations = {
     contact_me:"",
     send_message:"",
     
+    // ####### About ###########
+
+    languages:"Idiomas"
   },
   jp: {
-    close:"閉まります",
+    close:"閉じる",
     select_language: "言語を選んでください",
     es: "スペイン語",
     en: "英語",
@@ -86,5 +89,8 @@ export const translations = {
     contact_me:"",
     send_message:"",
     
+    // ####### About ###########
+
+    languages:"言語"
   },
 };
