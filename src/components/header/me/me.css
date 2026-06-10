@@ -1,38 +1,74 @@
 .me-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.me-container__ring {
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    border: 2px dashed var(--color-primary-variant);
+    animation: ringSpin 20s linear infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@keyframes ringSpin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .element-me {
-  text-align: center;
-  width: 100px;
+    text-align: center;
 }
 
-/* Specific Positions for Elements */
 .element-me-1 {
-  align-self: flex-start;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+    margin-top: 1rem;
 }
 
 .element-me-2 {
-  align-self: center;
-  justify-self: center;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(var(--color-primary), #666A73, #353540, transparent);
-  border-radius: 12rem 12rem 0rem 0rem;
-  height: 30rem;
-  width: 22rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: linear-gradient(
+        180deg,
+        var(--color-primary-light) 0%,
+        var(--color-primary) 60%,
+        transparent 100%
+    );
+    border-radius: 12rem 12rem 0 0;
+    height: 22rem;
+    width: 18rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
 }
 
-.element-me-3 {
-  align-self: flex-end;
-  position: absolute;
-  right: 0;
-  width: 300px;
+.element-me-2 img {
+    height: 95%;
+    width: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+@media screen and (max-width: 600px) {
+    .element-me-2 {
+        height: 18rem;
+        width: 14rem;
+    }
+
+    .me-container__ring {
+        width: 13rem;
+        height: 13rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .me-container__ring {
+        animation: none;
+    }
 }

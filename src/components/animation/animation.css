@@ -1,4 +1,3 @@
-/*--------------- ANIMATION ------------------*/
 .container__animation {
     position: fixed;
     top: 0;
@@ -9,17 +8,32 @@
     background: var(--color-bg);
 }
 
-.pen{
+.animation-loading {
+    text-align: center;
+}
+
+.animation-loading__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.pen {
     width: auto;
-    /*---------row class from bootstrap--------*/
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
-    margin-right: calc(var(--bs-gutter-x)/ -2);
-    margin-left: calc(var(--bs-gutter-x)/ -2);
-    /*------------end boostrap css ----------*/
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
 }
 
 #svg1,
@@ -28,16 +42,10 @@
     height: auto;
 }
 
-.cls-1 {
-    fill: none;
-    stroke: #fcfcfc;
-    stroke-width: 1;
-    stroke-miterlimit: 10;
-}
-
+.cls-1,
 .cls-2 {
     fill: none;
-    stroke: #fcfcfc;
+    stroke: var(--color-primary);
     stroke-width: 1;
     stroke-miterlimit: 10;
 }
@@ -45,21 +53,17 @@
 .greetings {
     min-height: 80px;
     padding: 0;
-    /* top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    left: calc(50% - 150px); */
     text-align: center;
 }
 
-#name{
-    position: absolute;
-    padding: 0;
+.greetings h2,
+.greetings h3 {
+    color: var(--color-primary);
 }
 
 .pen1,
 .pen2 {
-    padding: 0px;
+    padding: 0;
     width: 150px;
     height: 50px;
 }
@@ -67,23 +71,20 @@
 .text1,
 .text2,
 .t1,
-.t2{
+.t2 {
     min-height: 1em;
 }
-/* Media querys (Medium devices) */
+
 @media screen and (max-width: 1024px) {
     .pen1,
-    .pen2{
+    .pen2 {
         width: 110px;
     }
 }
 
-/* Media querys (Small devices) */
 @media screen and (max-width: 600px) {
-
     .pen1,
     .pen2 {
         width: 84px;
     }
-
 }

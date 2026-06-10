@@ -1,42 +1,30 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-import { useEffect } from "react";
+import { useLanguage } from "../../context/LanguageContext";
+import { GREETINGS, GREETING_ORDER } from "../../utils/localeDetection";
 import "./animation.css";
+
 const Animation = () => {
-  // wait until DOM has been rendered
+  const { language, isReady } = useLanguage();
+  const hasPlayed = useRef(false);
+
   useEffect(() => {
-    var width = 390;
-    function myFunction(x) {
-      if (x.matches) {
-        // If media query matches
-        width = 250;
-        console.log("width 800px");
-      } else {
-        width = 390;
-        console.log("width +800px");
-      }
-    }
-    var x = window.matchMedia("(max-width: 800px)");
-    myFunction(x);
+    if (!isReady || hasPlayed.current) return;
+    hasPlayed.current = true;
 
-    // GSAP animation
-    gsap.registerPlugin(DrawSVGPlugin);
-    gsap.registerPlugin(TextPlugin);
+    gsap.registerPlugin(DrawSVGPlugin, TextPlugin);
 
-    //Drawing a pen
-    var tl1 = gsap
-      .timeline({
-        defaults: { duration: 0.3, ease: "power1.inOut" },
-      })
+    const primaryGreeting = GREETINGS[language] || GREETINGS.en;
+    const otherLanguages = GREETING_ORDER.filter((lang) => lang !== language);
+
+    const tl1 = gsap
+      .timeline({ defaults: { duration: 0.3, ease: "power1.inOut" } })
       .from("#cls-2-5", { stagger: 0.1, drawSVG: 0 })
-
       .from("#cls-2-2", { stagger: 0.1, drawSVG: 0 })
       .from("#cls-2-3", { stagger: 0.1, drawSVG: 0 })
-
       .from("#cls-2-6", { stagger: 0.1, drawSVG: 0 })
-
       .from("#cls-2-1", { stagger: 0.1, drawSVG: 0 })
       .fromTo(
         "#cls-1-1",
@@ -45,12 +33,9 @@ const Animation = () => {
       )
       .from("#cls-2-4", { stagger: 0.1, drawSVG: 0 })
       .from("#cls-1-2", { stagger: 0.1, drawSVG: 0 })
-
       .from("#cls-1-3", { stagger: 0.1, drawSVG: 0 })
       .from("#cls-1-4", { stagger: 0.1, drawSVG: 0 })
       .from("#cls-1-5", { stagger: 0.1, drawSVG: 0 })
-
-      /* Opening the pen */
       .to(".pen2", {
         duration: 2,
         x: 1000,
@@ -66,73 +51,65 @@ const Animation = () => {
           ease: "slow (0.1, 0.1, false)",
         },
         "<"
-      ) // "<" means start at the same time as previous
-
-      .to(".pen", { display: "none" })// Making the pen invisible
-      
-      /* Showing the website*/
+      )
+      .to(".pen", { display: "none" })
       .to(".text1", { duration: 0.5, text: "|" }, "-=2")
       .to(".text1", { duration: 0, text: "" })
       .to(".text2", { duration: 0.5, text: "|" })
       .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 1, text: "お世話になっております" })
-      .to(".text2", { duration: 1, text: "ビクターと申します。" })
-
-      // Animation that shows the rest of the website (cortain going up)
-
+      .to(".text1", { duration: 1, text: primaryGreeting.line1 })
+      .to(".text2", { duration: 1, text: primaryGreeting.line2 })
       .to(".container__animation", { duration: 2, height: "auto", delay: 1 })
       .to(".container__animation", { position: "static" })
       .to(".mask-1", { position: "absolute" }, "<")
-      // .to(".greetings", { position: "static", top:"auto", left:"auto", transform:"none"})
       .to("#root", { position: "relative" });
 
-    // Words animation
-    var tl2 = gsap
-      .timeline({ repeat: -1, repeatDelay: 2 })
+    const tl2 = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+
+    otherLanguages.forEach((lang) => {
+      const greeting = GREETINGS[lang];
+      tl2
+        .to(".text1", { duration: 2, text: "|" })
+        .to(".text1", { duration: 0, text: "" })
+        .to(".text2", { duration: 2, text: "|" })
+        .to(".text2", { duration: 0, text: "" })
+        .to(".text1", { duration: 2, text: greeting.line1 })
+        .to(".text2", { duration: 2, text: greeting.line2 });
+    });
+
+    tl2
       .to(".text1", { duration: 2, text: "|" })
       .to(".text1", { duration: 0, text: "" })
       .to(".text2", { duration: 2, text: "|" })
       .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "Hello" })
-      .to(".text2", { duration: 2, text: "I'm Victor" })
-      .to(".text1", { duration: 2, text: "|" })
-      .to(".text1", { duration: 0, text: "" })
-      .to(".text2", { duration: 2, text: "|" })
-      .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "Bonjour" })
-      .to(".text2", { duration: 2, text: "Je m'appelle Victor" })
-      .to(".text1", { duration: 2, text: "|" })
-      .to(".text1", { duration: 0, text: "" })
-      .to(".text2", { duration: 2, text: "|" })
-      .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "Hola" })
-      .to(".text2", { duration: 2, text: "Me llamo Victor" })
-      .to(".text1", { duration: 2, text: "|" })
-      .to(".text1", { duration: 0, text: "" })
-      .to(".text2", { duration: 2, text: "|" })
-      .to(".text2", { duration: 0, text: "" })
-      .to(".text1", { duration: 2, text: "お世話になっております" })
-      .to(".text2", { duration: 2, text: "ビクターと申します。" });
-    // Main timeline that runs them in sequence
-    var master = gsap.timeline();
-    master
-      .add(tl1) // tl1 runs first
-      .add(tl2); // tl2 starts after tl1 finishes
-  }, []);
+      .to(".text1", { duration: 2, text: primaryGreeting.line1 })
+      .to(".text2", { duration: 2, text: primaryGreeting.line2 });
+
+    const master = gsap.timeline();
+    master.add(tl1).add(tl2);
+  }, [isReady, language]);
+
+  if (!isReady) {
+    return (
+      <div className="container__animation d-flex align-items-center">
+        <div className="mx-auto animation-loading">
+          <div className="animation-loading__dot" />
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="">
+    <div>
       <div className="container__animation d-flex align-items-center">
         <div className="mx-auto">
           <div className="pen">
             <div className="pen1 d-flex flex-column justify-content-end">
               <svg
                 id="svg1"
-                data-name="Capa 1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 106.69 20"
               >
-                <title>pluma punta</title>
                 <path
                   className="cls-1"
                   id="cls-1-1"
@@ -168,11 +145,9 @@ const Animation = () => {
             <div className="pen2 d-flex flex-column justify-content-end">
               <svg
                 id="svg2"
-                data-name="Capa 1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 106.5 32.02"
               >
-                <title>Pluma 2</title>
                 <path
                   className="cls-2"
                   id="cls-2-1"
@@ -225,4 +200,5 @@ const Animation = () => {
     </div>
   );
 };
+
 export default Animation;

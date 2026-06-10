@@ -7,84 +7,92 @@ import Infosys from "../../assets/portfolio/infosyslog.jpg";
 import Autofin from "../../assets/portfolio/autofinlog.jpg";
 import McmVideo from "../../assets/videos/videocontrol.mp4";
 import { useLanguage } from "../../context/LanguageContext";
-import { RiHome7Fill } from "react-icons/ri";
 
 const data = [
   {
     id: 1,
     image: Infosys,
-    title: "Senior Software Engineer",
+    titleKey: "proj_infosys_title",
+    positionKey: "proj_infosys_position",
+    roleKey: "proj_infosys_role",
     github: null,
     demo: null,
   },
   {
     id: 2,
     image: Autofin,
-    title: "Full stack developer",
+    titleKey: "proj_autofin_title",
+    positionKey: "proj_autofin_position",
+    roleKey: "proj_autofin_role",
     github: null,
     demo: null,
   },
   {
     id: 3,
     image: Saica,
-    title: "Full stack developer",
+    titleKey: "proj_saica_title",
+    positionKey: "proj_saica_position",
+    roleKey: "proj_saica_role",
     github: "https://github.com/VictorCuevas98/saica",
     demo: "https://tics.finanzas.cdmx.gob.mx/saica/public/login",
   },
   {
     id: 4,
     image: Zanate,
-    title: "Business website",
+    titleKey: "proj_zanate_title",
+    positionKey: "proj_zanate_position",
+    roleKey: "proj_zanate_role",
     github: "https://github.com/ZanateDesign/zanatedesign.github.io",
     demo: "https://zanatedesign.github.io",
   },
   {
     id: 5,
     image: Mcm,
-    title: "University Project",
+    titleKey: "proj_mcm_title",
+    positionKey: "proj_mcm_position",
+    roleKey: "proj_mcm_role",
     github: "https://github.com/VictorCuevas98/controlmerma",
     demo: McmVideo,
   },
 ];
+
 const Portfolio = () => {
   const { getTranslation } = useLanguage();
+
   return (
     <section id="portfolio">
       <h5>{getTranslation("my_recent_work")}</h5>
       <h2>{getTranslation("portfolio")}</h2>
       <div className="container portfolio__container">
-        {data.map(({ id, image, title, github, demo }) => {
-          return (
-            <article key={id} className="portfolio__item container row">
-              <div className="portfolio__item-image">
-                <img src={image} alt={title} />
-              </div>
-              <h6 className="text-center">{title}</h6>
-              <p></p>
+        {data.map(({ id, image, titleKey, positionKey, roleKey, github, demo }) => (
+          <article key={id} className="portfolio__item">
+            <div className="portfolio__item-image">
+              <img src={image} alt={getTranslation(titleKey)} />
+            </div>
+            <div className="portfolio__item-body">
+              <h3>{getTranslation(titleKey)}</h3>
+              <p className="portfolio__position">{getTranslation(positionKey)}</p>
+              <p className="portfolio__role">{getTranslation(roleKey)}</p>
               {(github || demo) && (
-              <div className="container row text-center align-self-end justify-content-evenly">
-                {github && (
-                <div className="col-5">
-                <a href={github} className="btn" target="_blank">
-                  GitHub
-                </a>
+                <div className="portfolio__item-actions">
+                  {github && (
+                    <a href={github} className="btn" target="_blank" rel="noopener noreferrer">
+                      {getTranslation("github")}
+                    </a>
+                  )}
+                  {demo && (
+                    <a href={demo} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                      {getTranslation("live_demo")}
+                    </a>
+                  )}
                 </div>
-                )}
-
-                {demo && (
-                <div className="col-5">
-                <a href={demo} className="btn btn-primary" target="_blank">
-                  Live Demo
-                </a>
-                </div>
-                )}
-              </div>
               )}
-            </article>
-          );
-        })}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
 };
+
 export default Portfolio;

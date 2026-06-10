@@ -1,35 +1,49 @@
 nav {
     backdrop-filter: blur(15px);
-    /* background: rgba(0, 0, 0, 0.3); */
-    background: rgba(201, 201, 201, 0.301);
-    border-radius: 3rem;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
     top: 2rem;
-    bottom: 2rem;
-    gap: 0.8rem;
-    padding: 1rem 1.7rem;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
     position: sticky;
     width: max-content;
-    z-index: 1;
-    display: flex; 
+    z-index: 10;
+    display: flex;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 1rem;
+    box-shadow: var(--shadow-soft);
 }
 
 nav a {
     background: transparent;
-    padding: 0.9rem;
+    padding: 0.75rem;
     border-radius: 50%;
     display: flex;
     color: var(--color-light);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    transition: var(--transition);
 }
 
 nav a:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--color-bg-soft);
+    color: var(--color-primary);
 }
 
 nav a.active {
     background: var(--color-primary);
-    color: var(--color-bg);
+    color: var(--color-text-on-primary);
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 0.5rem 0.8rem;
+        gap: 0.2rem;
+    }
+
+    nav a {
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
 }
