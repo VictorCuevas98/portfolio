@@ -6,9 +6,9 @@ function Buttons() {
 
   return (
     <div className="cv">
-      <a href={PDF} download className="btn btn-primary">
+      {/* <a href={PDF} download className="btn btn-primary">
         {getTranslation("download_cv")}
-      </a>
+      </a> */}
     </div>
   );
 }

@@ -15,17 +15,17 @@ export const translations = {
     gtk: "Get To Know",
     am: "About Me",
     about_desc:
-      "Software developer who enjoys collaboration and self-learning, passionate about languages, and a big fan of sports.",
+        "Software developer who enjoys collaboration and self-learning, passionate about languages, and a big fan of sports.",
     story_1:
-      "Committed to delivering IT services with an excellent workspace to focus and create quality solutions.",
+        "Listen to other people's opinions and ideas, can bring so much value to the table.",
     story_2:
-      "Always learning — exploring new technologies, languages, and ways to build better software.",
+        "Always learning — exploring new technologies, languages, and ways to build better software.",
     story_3:
-      "Team player at heart. I believe great products come from clear communication and shared goals.",
+        "A clean workspace to focus is key to create quality solutions and be committed to delivering IT services with excellence.",
     ed: "Education",
     ed_desc: "Bachelor's in Computer Systems",
     exp: "Experience",
-    exp_desc: "4+ years in software development",
+    exp_desc: "3+ years in software development",
     languages: "Languages",
     lang_desc: "Spanish · English · Japanese (studying)",
 
@@ -38,17 +38,17 @@ export const translations = {
     proj_infosys_title: "Infosys",
     proj_infosys_position: "Senior Software Engineer",
     proj_infosys_role:
-      "Leading development initiatives, mentoring teams, and delivering enterprise-grade solutions.",
+      "Developing banking software solutions, maintaining production systems, and collaborating with cross-functional teams.",
 
     proj_autofin_title: "Autofin",
     proj_autofin_position: "Full Stack Developer",
     proj_autofin_role:
-      "Building and maintaining web applications for automotive financial services.",
+      "Building and maintaining web applications for banking financial services.",
 
     proj_saica_title: "SAICA",
     proj_saica_position: "Full Stack Developer",
     proj_saica_role:
-      "Developed a government platform for CDMX finance department with React and Laravel.",
+      "Developed and maintained web applications for the Mexican Ministry of Health.",
 
     proj_zanate_title: "Zanate Design",
     proj_zanate_position: "Business Website",
@@ -109,11 +109,11 @@ export const translations = {
     about_desc:
       "Desarrollador de software, competitivo y ansioso por enfrentar nuevos desafíos. Apasionado por los idiomas y la programación.",
     story_1:
-      "Comprometido con entregar servicios de TI con un excelente espacio de trabajo para concentrarme y crear soluciones de calidad.",
+      "Escuchar las opiniones e ideas de otras personas puede aportar muchísimo valor.",
     story_2:
       "Siempre aprendiendo — explorando nuevas tecnologías, idiomas y formas de construir mejor software.",
     story_3:
-      "Trabajo en equipo. Creo que los grandes productos nacen de la comunicación clara y objetivos compartidos.",
+      "Un espacio de trabajo limpio que permita concentrarse es fundamental para crear soluciones de calidad y comprometerse a ofrecer servicios de TI con excelencia.",
     ed: "Educación",
     ed_desc: "Licenciatura en Sistemas Computacionales",
     exp: "Experiencia",
@@ -129,17 +129,17 @@ export const translations = {
     proj_infosys_title: "Infosys",
     proj_infosys_position: "Ingeniero de Software Senior",
     proj_infosys_role:
-      "Liderando iniciativas de desarrollo, mentoría de equipos y entrega de soluciones empresariales.",
+      "Desarrollando soluciones de software bancario, manteniendo sistemas en producción y colaborando con equipos multidisciplinarios.",
 
     proj_autofin_title: "Autofin",
     proj_autofin_position: "Desarrollador Full Stack",
     proj_autofin_role:
-      "Construcción y mantenimiento de aplicaciones web para servicios financieros automotrices.",
+      "Desarrollo y mantenimiento de aplicaciones web para servicios financieros bancarios.",
 
     proj_saica_title: "SAICA",
     proj_saica_position: "Desarrollador Full Stack",
     proj_saica_role:
-      "Desarrollé una plataforma gubernamental para la secretaría de finanzas de CDMX con React y Laravel.",
+      "Desarrollo de aplicaciones web para el Ministerio de Salud de México.",
 
     proj_zanate_title: "Zanate Design",
     proj_zanate_position: "Sitio Web Empresarial",
@@ -198,11 +198,11 @@ export const translations = {
     about_desc:
       "ソフトウェア開発者として、競争力があり、新しい課題に挑戦することに意欲的です。言語とプログラミングに情熱を持っています。",
     story_1:
-      "集中して質の高いソリューションを生み出すための、優れたワークスペースでITサービスを提供することに尽力しています。",
+      "他の人の意見やアイデアを聞くと、たくさんの学びや価値があります。",
     story_2:
       "常に学び続けています — 新しい技術、言語、より良いソフトウェアを構築する方法を探求しています。",
     story_3:
-      "チームプレイヤーです。優れたプロダクトは明確なコミュニケーションと共有された目標から生まれると信じています。",
+      "集中できる清潔な作業環境は、高品質なソリューションを生み出し、優れたITサービスを提供するための重要な要素です。",
     ed: "学歴",
     ed_desc: "コンピュータシステム学士",
     exp: "経験",
@@ -218,17 +218,17 @@ export const translations = {
     proj_infosys_title: "Infosys",
     proj_infosys_position: "シニアソフトウェアエンジニア",
     proj_infosys_role:
-      "開発イニシアチブのリード、チームのメンタリング、エンタープライズソリューションの提供。",
+      "銀行向けソフトウェアの開発、運用システムの保守、そして多様なチームと連携しながらプロジェクトを推進。",
 
     proj_autofin_title: "Autofin",
     proj_autofin_position: "フルスタック開発者",
     proj_autofin_role:
-      "自動車金融サービス向けWebアプリケーションの構築と保守。",
+      "銀行・金融業界向けのWebアプリケーションの開発・保守を担当。",
 
     proj_saica_title: "SAICA",
     proj_saica_position: "フルスタック開発者",
     proj_saica_role:
-      "ReactとLaravelでCDMX財務局向け政府プラットフォームを開発。",
+      "メキシコ保健省向けWebシステムの開発を担当。",
 
     proj_zanate_title: "Zanate Design",
     proj_zanate_position: "ビジネスウェブサイト",
