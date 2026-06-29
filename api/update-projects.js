@@ -5,10 +5,7 @@ export default async function handler(req, res) {
     }
 
     // Simple secret to prevent randos from calling this endpoint
-    const { adminSecret, projects } = req.body;
-    if (adminSecret !== process.env.ADMIN_SECRET) {
-        return res.status(401).json({ error: 'Unauthorized' });
-    }
+    const { projects } = req.body;
 
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
     const OWNER = process.env.GITHUB_OWNER;       // e.g. "victordev"

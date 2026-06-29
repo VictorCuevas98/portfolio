@@ -39,8 +39,7 @@ const WorkingOnAdmin = () => {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                adminSecret: import.meta.env.VITE_ADMIN_SECRET, // ← see note below
-                projects: posts,
+                projects: posts
             }),
         });
 

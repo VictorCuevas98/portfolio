@@ -1,8 +1,5 @@
-export const POSTS_STORAGE_KEY = "workingon_posts";
 export const ADMIN_SESSION_KEY = "workingon_admin_session";
-
-export const ADMIN_PASSWORD =
-    process.env.REACT_APP_ADMIN_PASSWORD;
+export const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PANEL_PASSWORD;
 
 export async function fetchPosts() {
     try {
@@ -34,6 +31,7 @@ export function isAdminAuthenticated() {
 }
 
 export function authenticateAdmin(password) {
+    console.log(ADMIN_PASSWORD);
     if (password === ADMIN_PASSWORD) {
         sessionStorage.setItem(ADMIN_SESSION_KEY, "true");
         return true;
