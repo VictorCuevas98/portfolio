@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
     const OWNER = process.env.GITHUB_OWNER;       // e.g. "victordev"
     const REPO = process.env.GITHUB_REPO;         // e.g. "portfolio"
-    const FILE_PATH = '/data/workingon.json';   // adjust to your actual path
+    const FILE_PATH = 'public/data/workingon.json';   // adjust to your actual path
 
     try{
 
