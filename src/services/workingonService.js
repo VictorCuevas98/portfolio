@@ -1,8 +1,7 @@
 export const POSTS_STORAGE_KEY = "workingon_posts";
 export const ADMIN_SESSION_KEY = "workingon_admin_session";
 
-export const ADMIN_PASSWORD =
-    process.env.REACT_APP_ADMIN_PASSWORD;
+export const ADMIN_PASSWORD = import.meta.env.ADMIN_PANEL_PASSWORD;
 
 export async function fetchPosts() {
     try {
