@@ -1,5 +1,13 @@
 [
   {
+    "id": "1782861952464",
+    "title": "E-commerce system",
+    "subtitle": "Grupo Zanate E-commerce system",
+    "description": "E-commerce website for a relatively small company that wants to thrive in the IT revolutionary industry, which believes in rapid evolution and opportunities. I am fully responsible for the software life cycle, which is why our focus is MVP (minimum viable product). Looking for the best practices so that we can scale the system in the future for microservices infrastructure, if the market grows.\nStack: Java Spring Boot, React, Rest API.",
+    "image": "",
+    "date": "2026-04-01"
+  },
+  {
     "id": "1",
     "title": "ISIランゲージスクール新宿校",
     "subtitle": "Japanese Language School, Tokyo, Japan",
